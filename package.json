@@ -1,7 +1,8 @@
 {
   "name": "rechord-client",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
+  "verbatimModuleSyntax": false,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -10,15 +11,18 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
+    "@types/uikit": "^3.14.1",
     "axios": "^1.5.1",
+    "uikit": "^3.17.2-dev.a0d91caa0",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.4"
+    "vue-router": "4"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
     "@types/node": "^18.17.17",
     "@vitejs/plugin-vue": "^4.3.4",
     "@vue/tsconfig": "^0.4.0",
+    "less": "^4.2.0",
     "npm-run-all2": "^6.0.6",
     "typescript": "~5.2.0",
     "vite": "^4.4.9",
