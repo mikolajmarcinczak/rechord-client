@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router';
+import {defineComponent} from 'vue';
+
+defineComponent({
+	name: 'App'
+});
 
 </script>
 

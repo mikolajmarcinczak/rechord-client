@@ -1,20 +1,28 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {createRouter, createWebHashHistory } from 'vue-router';
 import type { RouteRecordRaw }  from 'vue-router';
 import albumRoutes from "./albums.routes";
+import artistsRoutes from "@/router/artists.routes";
+import genresRoutes from "@/router/genres.routes";
+import labelsRoutes from "@/router/labels.routes";
+import playlistsRoutes from "@/router/playlists.routes";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     alias: '/home',
-    component: () => import()
+    component: () => import("@/views/HomeView.vue")
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import()
+    component: () => import("@/views/AboutView.vue")
   },
-    ...albumRoutes
+    ...albumRoutes,
+    ...artistsRoutes,
+    ...genresRoutes,
+    ...labelsRoutes,
+    ...playlistsRoutes
   /*
   {
     path: '/artists',
@@ -39,7 +47,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
 })
 
