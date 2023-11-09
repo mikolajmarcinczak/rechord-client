@@ -1,23 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import type { RouteRecordRaw }  from 'vue-router';
+import albumRoutes from "./albums.routes";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     alias: '/home',
-    component: () => import('../views/HomeView.vue')
+    component: () => import()
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/AboutView.vue')
+    component: () => import()
   },
-  /*{
-    path: '/albums',
-    name: 'Albums',
-    component: () => import('../views/AlbumsView.vue')
-  },
+    ...albumRoutes
+  /*
   {
     path: '/artists',
     name: 'Artists',
