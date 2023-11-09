@@ -13,9 +13,11 @@
   "dependencies": {
     "@types/uikit": "^3.14.1",
     "axios": "^1.5.1",
+    "jquery": "^3.7.1",
     "uikit": "^3.17.2-dev.a0d91caa0",
     "vue": "^3.3.4",
-    "vue-router": "4"
+    "vue-router": "4",
+    "rechord-common": "../rechord-common"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",

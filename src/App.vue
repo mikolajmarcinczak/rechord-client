@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+
 </script>
 
 <template>
   <header>
-		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; end: + *; offset: 80">
+		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
 			<nav class="uk-navbar-container uk-margin">
 				<div class="uk-container">
 					<div uk-navbar>
@@ -46,7 +47,9 @@ import { RouterLink, RouterView } from 'vue-router'
 		</div>
   </header>
 
-  <RouterView />
+	<div class="uk-container uk-container-small">
+		<RouterView />
+	</div>
 </template>
 
 <style lang="less">
