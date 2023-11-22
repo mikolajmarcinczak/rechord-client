@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
-import {defineComponent} from 'vue';
+import { defineComponent } from 'vue';
+import UIkit from "uikit";
 
 defineComponent({
 	name: 'App'
@@ -9,9 +10,10 @@ defineComponent({
 </script>
 
 <template>
+
   <header>
-		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
-			<nav class="uk-navbar-container uk-margin">
+
+			<nav class="uk-navbar-container nav-width">
 				<div class="uk-container">
 					<div uk-navbar>
 
@@ -36,7 +38,9 @@ defineComponent({
 									</li>
 								</ul>
 							</div>
+
 							<a class="uk-navbar-item" href="#"><RouterLink to="/">Home</RouterLink></a>
+
 							<div class="uk-navbar-center-right">
 								<ul class="uk-nav uk-navbar-nav">
 									<li class="uk-navbar-item"><RouterLink to="/about"><a href="#">About</a></RouterLink></li>
@@ -49,14 +53,23 @@ defineComponent({
 					</div>
 				</div>
 			</nav>
-		</div>
+
   </header>
 
-	<div class="uk-container uk-container-small">
-		<RouterView />
-	</div>
+	<main>
+		<div class="uk-section">
+			<RouterView />
+		</div>
+	</main>
+
 </template>
 
 <style lang="less">
 @import "../node_modules/uikit/src/less/uikit.less";
+body {
+	background-color: #EEE;
+}
+.nav-width {
+	width: 100%;
+}
 </style>

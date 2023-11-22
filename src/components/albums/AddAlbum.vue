@@ -57,6 +57,9 @@ export default defineComponent({
 </script>
 
 <template>
+
+<div class="uk-container">
+	<h3>Add new album: </h3>
 	<div class="submit-form">
 		<div v-if="!submitted">
 			<div class="uk-margin">
@@ -130,11 +133,14 @@ export default defineComponent({
 			</button>
 		</div>
 	</div>
+
+</div>
+
 </template>
 
 <style scoped>
 .submit-form {
-	max-width: 300px;
+	max-width: 800px;
 	margin: auto;
 }
 </style>

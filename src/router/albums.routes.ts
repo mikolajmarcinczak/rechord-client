@@ -1,21 +1,24 @@
 import type {RouteRecordRaw} from "vue-router";
+import AddAlbum from "@/components/albums/AddAlbum.vue";
+import AlbumsList from "@/components/albums/AlbumsList.vue";
+import AlbumDetails from "@/components/albums/AlbumDetails.vue";
 
 const albumRoutes: Array<RouteRecordRaw> = [
   {
     path: "/albums",
     alias: "/albumsList",
     name: "Albums",
-    component : () => import("@/components/albums/AlbumsList.vue")
+    component : AlbumsList
   },
   {
     path: "/albums/:catalogNumber",
     name: "AlbumDetails",
-    component : () => import("@/components/albums/AlbumDetails.vue")
+    component : AlbumDetails
   },
   {
-    path: "/albums/addAlbum",
+    path: "/albums/add",
     name: "AddAlbum",
-    component : () => import("@/components/albums/AddAlbum.vue")
+    component : AddAlbum
   }
 ]
 
