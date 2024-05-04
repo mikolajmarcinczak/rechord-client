@@ -90,9 +90,9 @@ export default defineComponent({
 				<li
 					class="uk-margin"
 					:class="{ 'uk-active': -1 !== currentIndex }"
-					v-for="album in albums"
+					v-for="(album, index) in albums"
 					:key="album.catalogNumber"
-					@click="setActiveAlbum(album)"
+					@click="setActiveAlbum(album, index)"
 				> {{ album.albumName }}</li>
 			</ul>
 
